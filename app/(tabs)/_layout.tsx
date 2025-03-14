@@ -27,19 +27,19 @@ export default function TabLayout() {
         headerShown: useClientOnlyValue(false, true),
       }}>
       <Tabs.Screen
-        name="index"
+        name="one"
         options={{
           title: 'Tab One',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
-              <Pressable>
+              <Pressable style={{ marginRight: 15 }}>
                 {({ pressed }) => (
                   <FontAwesome
                     name="info-circle"
                     size={25}
                     color={Colors[colorScheme ?? 'light'].text}
-                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+                    style={{ opacity: pressed ? 0.5 : 1 }}
                   />
                 )}
               </Pressable>
