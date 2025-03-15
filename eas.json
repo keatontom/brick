@@ -1,0 +1,25 @@
+{
+  "build": {
+    "development": {
+      "distribution": "internal",
+      "ios": {
+        "simulator": false,
+        "developmentClient": true
+      },
+      "android": {
+        "gradleCommand": ":app:assembleDebug"
+      }
+    },
+    "production": {
+      "ios": {
+        "image": "macos-latest",
+        "scheme": "brickNObrick",
+        "buildConfiguration": "Release"
+      },
+      "android": {
+        "image": "default",
+        "gradleCommand": ":app:assembleRelease"
+      }
+    }
+  }
+}
